@@ -18,11 +18,7 @@ export default function Hero() {
         style={{ y }}
         className="absolute inset-0 w-full h-full"
       >
-        <img
-          src="/images/mountain-landscape.jpg"
-          alt="Mountain landscape"
-          className="w-full h-full object-cover"
-        />
+        <div className="w-full h-full" style={{ background: "linear-gradient(135deg, #1a5c2a 0%, #2e8b57 30%, #4caf50 60%, #81c784 100%)" }} />
       </motion.div>
 
       <div className="relative z-10 text-center text-white">
