@@ -21,7 +21,12 @@ export default function Hero() {
           style={{ y }}
           className="absolute inset-0 w-full h-full"
         >
-          <div className="w-full h-full" style={{ background: "linear-gradient(135deg, #1a5c2a 0%, #2e8b57 30%, #4caf50 60%, #81c784 100%)" }} />
+          <img
+            src="https://cdn.poehali.dev/projects/206b3656-9d1e-43ac-9ec1-9dbc94f2a83e/files/a5c023da-8bc8-489e-9f62-17ca15fd0448.jpg"
+            alt="Озеленение участка"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40" />
         </motion.div>
 
         <div className="relative z-10 text-center text-white">
