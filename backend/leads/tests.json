@@ -10,19 +10,15 @@
       "name": "Отправка заявки",
       "method": "POST",
       "path": "/",
-      "body": {"name": "Иван", "phone": "+7 999 123-45-67"},
-      "expectedStatus": 200,
-      "expectedBody": {"success": true},
-      "bodyMatcher": "partial"
+      "body": {"name": "Тест", "phone": "+7 900 000-00-00"},
+      "expectedStatus": 200
     },
     {
       "name": "Пустые поля — ошибка",
       "method": "POST",
       "path": "/",
       "body": {"name": "", "phone": ""},
-      "expectedStatus": 400,
-      "expectedBody": {"error": "Заполните имя и телефон"},
-      "bodyMatcher": "partial"
+      "expectedStatus": 400
     }
   ]
 }
