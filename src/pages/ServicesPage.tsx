@@ -67,7 +67,7 @@ export default function ServicesPage() {
           </svg>
           Назад
         </button>
-        <span className="text-white text-sm uppercase tracking-wide font-medium">АкваГрин</span>
+        <span className="text-white text-sm uppercase tracking-wide font-medium">Зелёный участок</span>
         <div className="w-16" />
       </header>
 
