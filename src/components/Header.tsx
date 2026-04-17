@@ -9,7 +9,7 @@ export default function Header({ className }: HeaderProps) {
         <div className="text-white text-sm uppercase tracking-wide">АкваГрин</div>
         <nav className="flex gap-8">
           <a
-            href="#about"
+            href="/services"
             className="text-white hover:text-neutral-400 transition-colors duration-300 uppercase text-sm"
           >
             Услуги
