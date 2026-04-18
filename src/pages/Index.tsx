@@ -3,6 +3,9 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Featured from "@/components/Featured";
 import Promo from "@/components/Promo";
+import Portfolio from "@/components/Portfolio";
+import Guarantee from "@/components/Guarantee";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import LeadModal from "@/components/LeadModal";
 
@@ -15,6 +18,9 @@ const Index = () => {
       <Hero />
       <Featured />
       <Promo />
+      <Portfolio />
+      <Guarantee />
+      <FAQ />
       <Footer onOpenModal={() => setModalOpen(true)} />
       <LeadModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </main>
