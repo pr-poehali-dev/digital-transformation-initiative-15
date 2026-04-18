@@ -1,4 +1,8 @@
-export default function Footer() {
+interface FooterProps {
+  onOpenModal?: () => void;
+}
+
+export default function Footer({ onOpenModal }: FooterProps) {
   return (
     <div
       className="relative h-[400px] sm:h-[600px] lg:h-[800px] max-h-[800px]"
@@ -22,12 +26,12 @@ export default function Footer() {
                 >
                   Озеленение
                 </a>
-                <a
-                  href="#contact"
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
+                <button
+                  onClick={onOpenModal}
+                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base cursor-pointer bg-transparent border-none p-0 text-left"
                 >
                   Связаться
-                </a>
+                </button>
               </div>
               <div className="flex flex-col gap-1 sm:gap-2">
                 <h3 className="mb-1 sm:mb-2 uppercase text-neutral-400 text-xs sm:text-sm">Компания</h3>

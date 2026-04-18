@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
+import LeadModal from "@/components/LeadModal";
 
 const tabs = ["Системы полива", "Озеленение", "Газоны"];
 
@@ -44,6 +45,7 @@ const data = {
 
 export default function Pricing() {
   const [activeTab, setActiveTab] = useState(tabs[0]);
+  const [modalOpen, setModalOpen] = useState(false);
   const table = data[activeTab as keyof typeof data];
 
   return (
@@ -133,15 +135,15 @@ export default function Pricing() {
             <p className="text-lg font-semibold mb-1">Хотите точный расчёт под ваш участок?</p>
             <p className="text-neutral-400 text-sm">Выезд и смета — бесплатно, без обязательств.</p>
           </div>
-          <a
-            href="#"
-            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+          <button
+            onClick={() => setModalOpen(true)}
             className="shrink-0 bg-white text-black px-6 py-3 text-sm uppercase tracking-wide font-medium hover:bg-neutral-200 transition-colors cursor-pointer"
           >
             Заказать выезд
-          </a>
+          </button>
         </div>
       </div>
+      <LeadModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </section>
   );
 }

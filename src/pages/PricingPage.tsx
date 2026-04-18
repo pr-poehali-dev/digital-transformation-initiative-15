@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Icon from "@/components/ui/icon";
+import LeadModal from "@/components/LeadModal";
 
 const tabs = ["Системы полива", "Озеленение", "Газоны"];
 
@@ -44,6 +45,7 @@ const goodValues = ["Бесплатно", "Входит в монтаж", "24 м
 
 export default function PricingPage() {
   const [activeTab, setActiveTab] = useState(tabs[0]);
+  const [modalOpen, setModalOpen] = useState(false);
   const navigate = useNavigate();
   const table = data[activeTab as keyof typeof data];
 
@@ -146,13 +148,14 @@ export default function PricingPage() {
             <p className="text-neutral-400 text-sm">Выезд и смета — бесплатно, без обязательств.</p>
           </div>
           <button
-            onClick={() => navigate("/")}
+            onClick={() => setModalOpen(true)}
             className="shrink-0 bg-white text-black px-6 py-3 text-sm uppercase tracking-wide font-medium hover:bg-neutral-200 transition-colors cursor-pointer"
           >
             Заказать выезд
           </button>
         </div>
       </div>
+      <LeadModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </div>
   );
 }

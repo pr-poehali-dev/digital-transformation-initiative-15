@@ -1,8 +1,9 @@
 interface HeaderProps {
   className?: string;
+  onOpenModal?: () => void;
 }
 
-export default function Header({ className }: HeaderProps) {
+export default function Header({ className, onOpenModal }: HeaderProps) {
   return (
     <header className={`absolute top-0 left-0 right-0 z-10 p-6 ${className ?? ""}`}>
       <div className="flex justify-between items-center">
@@ -20,12 +21,12 @@ export default function Header({ className }: HeaderProps) {
           >
             Цены
           </a>
-          <a
-            href="#contact"
-            className="text-white hover:text-neutral-400 transition-colors duration-300 uppercase text-sm"
+          <button
+            onClick={onOpenModal}
+            className="text-white hover:text-neutral-400 transition-colors duration-300 uppercase text-sm cursor-pointer bg-transparent border-none p-0"
           >
             Связаться
-          </a>
+          </button>
         </nav>
       </div>
     </header>
