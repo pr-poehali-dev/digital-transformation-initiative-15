@@ -26,12 +26,14 @@ export default function Footer({ onOpenModal }: FooterProps) {
                 >
                   Озеленение
                 </a>
-                <button
-                  onClick={onOpenModal}
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base cursor-pointer bg-transparent border-none p-0 text-left"
+                <a
+                  href="https://t.me/+K_p5EKELO3IwZTgy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
                 >
                   Связаться
-                </button>
+                </a>
               </div>
               <div className="flex flex-col gap-1 sm:gap-2">
                 <h3 className="mb-1 sm:mb-2 uppercase text-neutral-400 text-xs sm:text-sm">Компания</h3>

@@ -21,12 +21,14 @@ export default function Header({ className, onOpenModal }: HeaderProps) {
           >
             Цены
           </a>
-          <button
-            onClick={onOpenModal}
-            className="text-white hover:text-neutral-400 transition-colors duration-300 uppercase text-sm cursor-pointer bg-transparent border-none p-0"
+          <a
+            href="https://t.me/+K_p5EKELO3IwZTgy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-neutral-400 transition-colors duration-300 uppercase text-sm"
           >
             Связаться
-          </button>
+          </a>
         </nav>
       </div>
     </header>
